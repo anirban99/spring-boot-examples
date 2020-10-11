@@ -1,0 +1,26 @@
+version: '2'
+services:
+  postgres:
+    image: "postgres:latest"
+    environment:
+      - "POSTGRES_USER=postgres"
+      - "POSTGRES_PASSWORD=pass"
+      - "POSTGRES_DB=employees"
+    ports:
+      - 5432:5432
+  prometheus:
+    image: prom/prometheus:v2.8.0
+    volumes:
+      - ./ops/config/prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+    ports:
+      - 9090:9090
+  grafana:
+    image: grafana/grafana:6.2.0
+    ports:
+      - 3000:3000
+    volumes:
+      - ./ops/config/grafana/provisioning/datasource.yaml:/etc/grafana/provisioning/datasources/datasource.yaml
+      - ./ops/config/grafana/provisioning/dashboard.yaml:/etc/grafana/provisioning/dashboards/dashboard.yaml
+      - ./ops/config/grafana/dashboards:/var/lib/grafana/dashboards
+    depends_on:
+      - prometheus
