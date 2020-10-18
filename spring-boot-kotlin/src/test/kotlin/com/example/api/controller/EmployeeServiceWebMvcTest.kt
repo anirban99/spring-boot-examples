@@ -14,6 +14,8 @@ import org.springframework.http.MediaType
 import org.springframework.test.web.servlet.MockMvc
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
 
@@ -75,6 +77,34 @@ class EmployeeServiceWebMvcTest {
                 .accept(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk)
                 .andExpect(jsonPath("$.id").value(id))
-                .andExpect(jsonPath("$.firstName").value("Brock"))
+                .andExpect(jsonPath("$.firstName").value(employee.firstName))
+    }
+
+    @Test
+    fun `Given valid url, when PUT employee is called, then returns 200 `() {
+        val employee = EmployeeFaker.fakeUpdatedEmployee().copy(id = id)
+
+        Mockito.`when`(employeeService.updateEmployeeById(id, employee)).doReturn(employee)
+
+        mockMvc.perform(put("/api/v1/employees/{id}", id)
+                .content(objectMapper.writeValueAsString(employee))
+                .contentType(MediaType.APPLICATION_JSON)
+                .accept(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk)
+                .andExpect(jsonPath("$.id").value(id))
+                .andExpect(jsonPath("$.firstName").value(employee.firstName))
+                .andExpect(jsonPath("$.emailId").value(employee.emailId))
+    }
+
+    @Test
+    fun `Given valid url, when DELETE employee by id is called, then returns 200 `() {
+        val employee = EmployeeFaker.fakeEmployee().copy(id = id)
+
+        Mockito.`when`(employeeService.deleteEmployeesById(id)).doReturn(employee)
+
+        mockMvc.perform(delete("/api/v1/employees/{id}", id)
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk)
+                .andExpect(jsonPath("$.id").value(id))
     }
 }
