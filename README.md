@@ -1,3 +1,3 @@
 ### Spring Boot examples
 
-This repository contains spring boot example using Java and Kotlin
+This repository contains examples for Spring-based applications using Java and Kotlin.
