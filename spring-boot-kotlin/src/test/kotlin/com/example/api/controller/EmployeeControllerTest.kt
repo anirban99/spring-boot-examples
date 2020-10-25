@@ -22,7 +22,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
 
 @WebMvcTest(controllers = [EmployeeController::class])
 @AutoConfigureMockMvc(addFilters = false)  //https://stackoverflow.com/questions/47593537/disable-spring-security-config-class-for-webmvctest-in-spring-boot
-class EmployeeServiceWebMvcTest {
+class EmployeeControllerTest {
     @Autowired
     private lateinit var mockMvc: MockMvc
 

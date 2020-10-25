@@ -11,7 +11,7 @@ import org.junit.jupiter.api.assertThrows
 import org.mockito.Mockito.*
 import java.util.*
 
-class EmployeeServiceUnitTest {
+class EmployeeServiceTest {
 
     private val employeeRepository: EmployeeRepository = mock { }
     private val classUnderTest = EmployeeService(employeeRepository)
