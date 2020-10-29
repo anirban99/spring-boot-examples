@@ -33,6 +33,7 @@ dependencies {
 	implementation("io.micrometer:micrometer-registry-prometheus")
 	// Test frameworks
 	testImplementation("com.nhaarman.mockitokotlin2:mockito-kotlin:2.2.0")
+	testImplementation("com.h2database:h2:1.4.200")
 //	testImplementation("com.github.javafaker:javafaker:1.0.2")
 }
 
