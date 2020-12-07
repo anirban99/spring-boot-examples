@@ -19,7 +19,6 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delet
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers.status
 
-
 @WebMvcTest(controllers = [EmployeeController::class])
 @AutoConfigureMockMvc(addFilters = false)  //https://stackoverflow.com/questions/47593537/disable-spring-security-config-class-for-webmvctest-in-spring-boot
 class EmployeeControllerTest {
@@ -33,8 +32,6 @@ class EmployeeControllerTest {
     private lateinit var employeeService: EmployeeService
 
     private val id = Math.random().toLong()
-
-//    private val employeeService: EmployeeService = mock {  }
 
     @Test
     fun `Given valid url, when GET employee list is called, then returns 200 `() {
