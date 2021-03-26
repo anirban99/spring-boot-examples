@@ -1,34 +1,38 @@
 package com.example.api.controller
 
-import com.example.api.exception.EmployeeNotFoundException
-import com.example.api.repository.EmployeeRepository
 import com.example.api.repository.model.Employee
-import org.springframework.http.HttpStatus
-import org.springframework.web.bind.annotation.*
+import com.example.api.service.EmployeeService
+import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.RequestMapping
+import org.springframework.web.bind.annotation.GetMapping
+import org.springframework.web.bind.annotation.PostMapping
+import org.springframework.web.bind.annotation.PutMapping
+import org.springframework.web.bind.annotation.DeleteMapping
+import org.springframework.web.bind.annotation.PathVariable
+import org.springframework.web.bind.annotation.RequestBody
 
 /**
  * Controller for REST API endpoints
  */
 @RestController
 @RequestMapping("/api/v1")
-class EmployeeController(private val employeeRepository: EmployeeRepository) {
+class EmployeeController(private val employeeService: EmployeeService) {
 
     @GetMapping("/employees")
-    fun getAllEmployees(): List<Employee> = employeeRepository.findAll()
+    fun getAllEmployees(): List<Employee> = employeeService.getAllEmployees()
 
     @GetMapping("/employees/{id}")
-    fun getEmployeesById(@PathVariable("id") employeeId: Long): Employee = employeeRepository.findById(employeeId)
-            .orElseThrow { EmployeeNotFoundException(HttpStatus.NOT_FOUND, "No matching employee was found") }
+    fun getEmployeesById(@PathVariable("id") employeeId: Long): Employee =
+            employeeService.getEmployeesById(employeeId)
 
     @PostMapping("/employees")
-    fun createEmployee(@RequestBody payload: Employee): Employee = employeeRepository.save(payload)
+    fun createEmployee(@RequestBody payload: Employee): Employee = employeeService.createEmployee(payload)
 
-//    @PutMapping("/employees/{id}")
-//    fun updateEmployeeById(@PathVariable("id") employeeId: Long, @Valid @RequestBody payload: Employee): Employee = employeeRepository.update(payload)
-//
-//    @DeleteMapping("/employees/{id}")
-//    fun deleteEmployeesById(@PathVariable ("id") employeeId: Long): Unit = employeeRepository.findById(employeeId).map {
-//        employeeRepository.delete(it)
-//
-//    }
+    @PutMapping("/employees/{id}")
+    fun updateEmployeeById(@PathVariable("id") employeeId: Long, @RequestBody payload: Employee): Employee =
+            employeeService.updateEmployeeById(employeeId, payload)
+
+    @DeleteMapping("/employees/{id}")
+    fun deleteEmployeesById(@PathVariable("id") employeeId: Long): Unit =
+            employeeService.deleteEmployeesById(employeeId)
 }
