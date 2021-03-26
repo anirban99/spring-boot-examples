@@ -1,0 +1,22 @@
+# https://docs.spring.io/spring-boot/docs/current/reference/html/appendix-application-properties.html#common-application-properties-data
+spring:
+  datasource:
+    driver-class-name: "org.h2.Driver"
+    url: "jdbc:h2:mem:test_mem"
+    username: "sa"
+    password: "sa"
+  jpa:
+    hibernate:
+      # Hibernate ddl auto (create, create-drop, validate, update)
+      # Defaults to "create-drop" when using an embedded database and no schema manager was detected
+      ddl-auto: create-drop
+    # Enable logging of SQL statements
+    show-sql: true
+    # Whether to initialize the schema on startup
+    generate-ddl: false
+    properties:
+      # Hibernate Properties
+      hibernate:
+        # The SQL dialect makes Hibernate generate better SQL for the chosen database
+        dialect: org.hibernate.dialect.H2Dialect
+
