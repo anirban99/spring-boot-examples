@@ -1,8 +1,12 @@
 package com.example.api.repository.model
 
-//import java.time.Instant
 import java.time.LocalDate
-import javax.persistence.*
+import javax.persistence.Column
+import javax.persistence.Entity
+import javax.persistence.GeneratedValue
+import javax.persistence.GenerationType
+import javax.persistence.Id
+import javax.persistence.Table
 
 /**
  * Represents the database entity for storing the employee details.
@@ -24,8 +28,4 @@ data class Employee (
         val emailId: String,
         @Column(name = "day_of_birth", nullable = false)
         val dayOfBirth: LocalDate
-//        @Column(name = "created_at", nullable = false)
-//        val createdAt: Instant,
-//        @Column(name = "last_updated_at", nullable = false)
-//        val lastUpdatedAt: Instant = Instant.now()
 )
