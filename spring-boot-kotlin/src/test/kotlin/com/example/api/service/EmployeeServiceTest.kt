@@ -59,9 +59,7 @@ class EmployeeServiceTest {
 
     @Test
     fun `given updated employee details, when employee is updated by valid id, then it returns the updated employee details`() {
-        `when`(employeeRepository.findById(id)).doReturn(
-                Optional.of(EmployeeFaker.fakeEmployeeEntity().copy(id = id))
-        )
+        `when`(employeeRepository.existsById(id)).thenReturn(true)
         `when`(employeeRepository.save(EmployeeFaker.fakeUpdatedEmployeeEntity().copy(id = id))).doReturn(
                 EmployeeFaker.fakeUpdatedEmployeeEntity().copy(id = id)
         )

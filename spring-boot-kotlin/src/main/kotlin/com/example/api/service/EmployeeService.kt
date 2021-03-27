@@ -30,15 +30,9 @@ class EmployeeService(private val employeeRepository: EmployeeRepository) {
     }
 
     fun updateEmployeeById(employeeId: Long, employee: Employee): Employee {
-        return employeeRepository.findById(employeeId).orElse(null)?.let {
-            val updatedEmployeeDetails : EmployeeEntity = it.copy(
-                    firstName = employee.firstName,
-                    middleName = employee.middleName,
-                    lastName = employee.lastName,
-                    emailId = employee.emailId
-            )
-            Employee.from(employeeRepository.save(updatedEmployeeDetails))
-        } ?: throw EmployeeNotFoundException(HttpStatus.NOT_FOUND, "No matching employee was found")
+        return if (employeeRepository.existsById(employeeId)) {
+            Employee.from(employeeRepository.save(EmployeeEntity.from(employee)))
+        } else throw EmployeeNotFoundException(HttpStatus.NOT_FOUND, "No matching employee was found")
     }
 
     fun deleteEmployeesById(employeeId: Long): Employee {
