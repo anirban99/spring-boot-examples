@@ -46,17 +46,19 @@ class EmployeeService(private val employeeRepository: EmployeeRepository) {
      * @throws EmployeeNotFoundException the employee not found exception
      */
     fun updateEmployeeById(employeeId: Long, employee: Employee): Employee {
-        return employeeRepository.findById(employeeId).orElse(null)?.let {
-            val updatedEmployeeDetails: Employee = it.copy(
-                    userName = employee.userName,
-                    firstName = employee.firstName,
-                    middleName = employee.middleName,
-                    lastName = employee.lastName,
-                    emailId = employee.emailId,
-                    dayOfBirth = employee.dayOfBirth
+        return if (employeeRepository.existsById(employeeId)) {
+            employeeRepository.save(
+                    Employee(
+                            id = employee.id,
+                            userName = employee.userName,
+                            firstName = employee.firstName,
+                            middleName = employee.middleName,
+                            lastName = employee.lastName,
+                            emailId = employee.emailId,
+                            dayOfBirth = employee.dayOfBirth
+                    )
             )
-            employeeRepository.save(updatedEmployeeDetails)
-        } ?: throw EmployeeNotFoundException(HttpStatus.NOT_FOUND, "No matching employee was found")
+        } else throw EmployeeNotFoundException(HttpStatus.NOT_FOUND, "No matching employee was found")
     }
 
     /**
