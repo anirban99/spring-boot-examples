@@ -69,8 +69,8 @@ class EmployeeService(private val employeeRepository: EmployeeRepository) {
      * @throws EmployeeNotFoundException the employee not found exception
      */
     fun deleteEmployeesById(employeeId: Long) {
-        return employeeRepository.findById(employeeId).orElse(null)?.let {
-            employeeRepository.delete(it)
-        } ?: throw EmployeeNotFoundException(HttpStatus.NOT_FOUND, "No matching employee was found")
+        return if (employeeRepository.existsById(employeeId)) {
+            employeeRepository.deleteById(employeeId)
+        } else throw EmployeeNotFoundException(HttpStatus.NOT_FOUND, "No matching employee was found")
     }
 }
