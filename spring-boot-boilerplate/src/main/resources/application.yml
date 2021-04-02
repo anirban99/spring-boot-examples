@@ -2,14 +2,14 @@
 spring:
   datasource:
     driver-class-name: "org.h2.Driver"
-    url: "jdbc:h2:mem:test_mem"
+    url: "jdbc:h2:dev_db"
     username: "sa"
     password: "sa"
   jpa:
     hibernate:
       # Hibernate ddl auto (create, create-drop, validate, update)
       # Defaults to "create-drop" when using an embedded database and no schema manager was detected
-      ddl-auto: create-drop
+      ddl-auto: update
     # Enable logging of SQL statements
     show-sql: true
     # Whether to initialize the schema on startup
