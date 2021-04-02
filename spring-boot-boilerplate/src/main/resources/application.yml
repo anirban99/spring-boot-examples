@@ -2,7 +2,7 @@
 spring:
   datasource:
     driver-class-name: "org.h2.Driver"
-    url: "jdbc:h2:dev_db"
+    url: "jdbc:h2:mem:dev_db"
     username: "sa"
     password: "sa"
   jpa:
