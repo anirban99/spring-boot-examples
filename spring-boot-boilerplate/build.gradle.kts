@@ -4,7 +4,7 @@ plugins {
 	val kotlinVersion = "1.4.31"
 	id("org.springframework.boot") version "2.4.4"
 	id("io.spring.dependency-management") version "1.0.11.RELEASE"
-	kotlin("jvm") version "1.4.31"
+	kotlin("jvm") version kotlinVersion
 	// kotlin-spring is a wrapper on top of all-open - https://kotlinlang.org/docs/all-open-plugin.html#spring-support
 	kotlin("plugin.spring") version kotlinVersion
 	// kotlin-jpa is wrapped on top of no-arg - https://kotlinlang.org/docs/no-arg-plugin.html#jpa-support
