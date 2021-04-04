@@ -1,10 +1,10 @@
 ## Spring Boot in Kotlin
 
-This repository contains an implementation for a Spring-based application using Kotlin.
 ### Linked articles:
-[Expat Dev Blog](https://expatdev.com/posts/how-to-create-a-spring-boot-project/) | [Medium](https://levelup.gitconnected.com/how-to-create-a-spring-boot-project-17fa6f0696b6)
+- [How To Create a Spring Boot Project](https://expatdev.com/posts/how-to-create-a-spring-boot-project/)
 
 ## Getting Started
+This repository contains an implementation for a Spring Boot application using Kotlin.
 
 ### Requirement
 

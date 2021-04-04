@@ -1,6 +1,11 @@
 ## Spring Boot boilerplate in Kotlin
 
+### Linked articles:
+- [How To Create a Spring Boot Project](https://expatdev.com/posts/how-to-create-a-spring-boot-project/)
+- [Build REST API with Spring Boot and Kotlin](https://www.expatdev.com/posts/build-rest-api-spring-boot-kotlin/)
+
 ## Getting Started
+This repository contains a boilerplate code for a Spring Boot application using Kotlin.
 
 ### Requirement
 
