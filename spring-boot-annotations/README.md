@@ -1,8 +1,7 @@
 ### Spring Boot in Java
 
-This repository contains an implementation for a Spring-based application using Java.
-
 ## Getting Started
+This repository contains an implementation for a Spring Boot application using Java.
 
 ### Requirement
 
