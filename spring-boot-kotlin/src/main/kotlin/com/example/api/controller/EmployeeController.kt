@@ -10,7 +10,6 @@ import javax.validation.Valid
  * Controller for REST API endpoints
  */
 @RestController
-@RequestMapping("/api/v1")
 class EmployeeController(private val employeeService: EmployeeService) {
 
     @GetMapping("/employees")

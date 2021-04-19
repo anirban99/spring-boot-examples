@@ -43,7 +43,7 @@ class EmployeeWebApplicationTest {
         )
         Mockito.`when`(employeeService.getAllEmployees()).doReturn(employeeList)
 
-        mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/employees")
+        mockMvc.perform(MockMvcRequestBuilders.get("/employees")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isOk)
                 .andExpect(MockMvcResultMatchers.jsonPath("$").exists())
@@ -56,7 +56,7 @@ class EmployeeWebApplicationTest {
 
         Mockito.`when`(employeeService.getEmployeesById(id)).doReturn(employee)
 
-        mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/employees/{id}", id)
+        mockMvc.perform(MockMvcRequestBuilders.get("/employees/{id}", id)
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isOk)
                 .andExpect(MockMvcResultMatchers.jsonPath("$.id").value(id))
@@ -68,7 +68,7 @@ class EmployeeWebApplicationTest {
 
         Mockito.`when`(employeeService.createEmployee(employee)).doReturn(employee)
 
-        mockMvc.perform(MockMvcRequestBuilders.post("/api/v1/employees")
+        mockMvc.perform(MockMvcRequestBuilders.post("/employees")
                 .content(objectMapper.writeValueAsString(employee))
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON))
@@ -83,7 +83,7 @@ class EmployeeWebApplicationTest {
 
         Mockito.`when`(employeeService.updateEmployeeById(id, employee)).doReturn(employee)
 
-        mockMvc.perform(MockMvcRequestBuilders.put("/api/v1/employees/{id}", id)
+        mockMvc.perform(MockMvcRequestBuilders.put("/employees/{id}", id)
                 .content(objectMapper.writeValueAsString(employee))
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON))
@@ -99,7 +99,7 @@ class EmployeeWebApplicationTest {
 
         Mockito.`when`(employeeService.deleteEmployeesById(id)).doReturn(employee)
 
-        mockMvc.perform(MockMvcRequestBuilders.delete("/api/v1/employees/{id}", id)
+        mockMvc.perform(MockMvcRequestBuilders.delete("/employees/{id}", id)
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(MockMvcResultMatchers.status().isOk)
                 .andExpect(MockMvcResultMatchers.jsonPath("$.id").value(id))

@@ -19,6 +19,9 @@ class EmployeeService(private val employeeRepository: EmployeeRepository) {
         }
     }
 
+    /**
+     * TODO: Add fun findOneByEmployeeId(employeeId: Long): EmployeeEntity in repository
+     */
     fun getEmployeesById(employeeId: Long): Employee {
         return employeeRepository.findById(employeeId).orElse(null)?.let {
             Employee.from(it)
@@ -35,6 +38,10 @@ class EmployeeService(private val employeeRepository: EmployeeRepository) {
         } else throw EmployeeNotFoundException(HttpStatus.NOT_FOUND, "No matching employee was found")
     }
 
+    /**
+     * TODO: Add fun findOneByEmployeeId(employeeId: Long): EmployeeEntity in repository
+     * TODO: Replace with deleteById() function
+     */
     fun deleteEmployeesById(employeeId: Long): Employee {
         return employeeRepository.findById(employeeId).orElse(null)?.let {
             employeeRepository.delete(it)

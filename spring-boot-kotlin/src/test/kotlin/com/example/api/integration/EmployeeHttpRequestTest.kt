@@ -36,7 +36,7 @@ class EmployeeHttpRequestTest {
 
     private val id = Math.random().toLong()
 
-    private fun applicationUrl() = "http://localhost:$applicationPort/api/v1"
+    private fun applicationUrl() = "http://localhost:$applicationPort"
 
     @Test
     fun `Given valid url, when GET employee is called, then returns employee list with status 200`() {

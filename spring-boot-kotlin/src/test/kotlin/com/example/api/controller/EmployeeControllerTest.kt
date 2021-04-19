@@ -43,7 +43,7 @@ class EmployeeControllerTest {
         )
         Mockito.`when`(employeeService.getAllEmployees()).doReturn(employeeList)
 
-        mockMvc.perform(get("/api/v1/employees")
+        mockMvc.perform(get("/employees")
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk)
                 .andExpect(jsonPath("$").exists())
@@ -56,7 +56,7 @@ class EmployeeControllerTest {
 
         Mockito.`when`(employeeService.getEmployeesById(id)).doReturn(employee)
 
-        mockMvc.perform(get("/api/v1/employees/{id}", id)
+        mockMvc.perform(get("/employees/{id}", id)
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk)
                 .andExpect(jsonPath("$.id").value(id))
@@ -68,7 +68,7 @@ class EmployeeControllerTest {
 
         Mockito.`when`(employeeService.createEmployee(employee)).doReturn(employee)
 
-        mockMvc.perform(post("/api/v1/employees")
+        mockMvc.perform(post("/employees")
                 .content(objectMapper.writeValueAsString(employee))
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON))
@@ -83,7 +83,7 @@ class EmployeeControllerTest {
 
         Mockito.`when`(employeeService.updateEmployeeById(id, employee)).doReturn(employee)
 
-        mockMvc.perform(put("/api/v1/employees/{id}", id)
+        mockMvc.perform(put("/employees/{id}", id)
                 .content(objectMapper.writeValueAsString(employee))
                 .contentType(MediaType.APPLICATION_JSON)
                 .accept(MediaType.APPLICATION_JSON))
@@ -99,7 +99,7 @@ class EmployeeControllerTest {
 
         Mockito.`when`(employeeService.deleteEmployeesById(id)).doReturn(employee)
 
-        mockMvc.perform(delete("/api/v1/employees/{id}", id)
+        mockMvc.perform(delete("/employees/{id}", id)
                 .contentType(MediaType.APPLICATION_JSON))
                 .andExpect(status().isOk)
                 .andExpect(jsonPath("$.id").value(id))
