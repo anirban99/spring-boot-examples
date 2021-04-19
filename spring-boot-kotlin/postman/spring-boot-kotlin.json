@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "cbb73bb4-f4ac-49a3-8f12-8950ee3d3c08",
+		"_postman_id": "333b5055-25df-4d42-a7f4-9c68369108d6",
 		"name": "spring-boot-kotlin",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -103,7 +103,57 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"firstName\":\"Brock\",\n\t\"middleName\":null,\n\t\"lastName\":\"Lesnar\",\n\t\"emailId\":\"brock.lesnar2@gmail.com\"\n}",
+					"raw": "{\n\t\"userName\":\"john.doe\",\n    \"firstName\":\"John\",\n    \"lastName\":\"Doe\",\n    \"emailId\":\"john.doe@gmail.com\",\n    \"dayOfBirth\":\"1997-12-03\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /employees in localhost - 2",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"userName\": \"amelia.harrison\",\n    \"firstName\": \"Amelia\",\n    \"middleName\": \"Marie\",\n    \"lastName\": \"Harrison\",\n    \"emailId\": \"amelia.harrison@gmail.com\",\n    \"dayOfBirth\": \"1995-06-03\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -153,7 +203,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"id\": 2,\n\t\"firstName\":\"Brock\",\n\t\"middleName\": \"U2\",\n\t\"lastName\":\"Lesnar\",\n\t\"emailId\":\"brock.lesnar4@hotmail.com\"\n}",
+					"raw": "{\n\t\"id\": 1,\n    \"userName\": \"john.doe\",\n    \"firstName\": \"John\",\n    \"middleName\": \"Thomas\",\n    \"lastName\": \"Doe\",\n    \"emailId\": \"john.doe7@gmail.com\",\n    \"dayOfBirth\": \"1997-12-03\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -210,6 +260,5 @@
 			},
 			"response": []
 		}
-	],
-	"protocolProfileBehavior": {}
+	]
 }

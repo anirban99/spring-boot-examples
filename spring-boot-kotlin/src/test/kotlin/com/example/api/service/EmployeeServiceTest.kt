@@ -53,8 +53,8 @@ class EmployeeServiceTest {
         )
 
         val result = classUnderTest.createEmployee(EmployeeFaker.fakeEmployee())
-        assertEquals("Lesnar", result.lastName)
-        assertEquals("Brock", result.firstName)
+        assertEquals("Doe", result.lastName)
+        assertEquals("John", result.firstName)
     }
 
     @Test
@@ -65,8 +65,8 @@ class EmployeeServiceTest {
         )
 
         val result = classUnderTest.updateEmployeeById(id, EmployeeFaker.fakeUpdatedEmployee().copy(id = id))
-        assertEquals("Lesnar", result.lastName)
-        assertEquals("Shawn", result.firstName)
+        assertEquals("Doe", result.lastName)
+        assertEquals("Michaels", result.middleName)
     }
 
     @Test

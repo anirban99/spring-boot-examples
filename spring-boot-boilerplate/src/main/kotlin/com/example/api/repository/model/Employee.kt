@@ -13,7 +13,7 @@ import javax.persistence.Table
  */
 @Entity
 @Table(name = "employee")
-data class Employee (
+data class Employee(
         @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
         val id: Long?,
         @Column(name = "user_name", unique = true, nullable = false)

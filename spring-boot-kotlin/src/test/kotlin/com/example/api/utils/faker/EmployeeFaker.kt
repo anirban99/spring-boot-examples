@@ -2,6 +2,8 @@ package com.example.api.utils.faker
 
 import com.example.api.repository.model.EmployeeEntity
 import com.example.api.service.model.Employee
+import java.time.LocalDate
+
 //import com.github.javafaker.Faker
 
 class EmployeeFaker {
@@ -13,10 +15,12 @@ class EmployeeFaker {
 //            val javaFaker = Faker()
             return Employee(
                     id = id,
-                    firstName = "Brock",
+                    userName = "john.doe",
+                    firstName = "John",
                     middleName = "",
-                    lastName = "Lesnar",
-                    emailId = "Brock.Lesnar$emailId@gmail.com"
+                    lastName = "Doe",
+                    emailId = "john.doe$emailId@gmail.com",
+                    dayOfBirth = LocalDate.now()
             )
         }
 
@@ -24,30 +28,36 @@ class EmployeeFaker {
 //            val javaFaker = Faker()
             return EmployeeEntity(
                     id = id,
-                    firstName = "Brock",
+                    userName = "john.doe",
+                    firstName = "John",
                     middleName = "",
-                    lastName = "Lesnar",
-                    emailId = "Brock.Lesnar$emailId@gmail.com"
+                    lastName = "Doe",
+                    emailId = "john.doe$emailId@gmail.com",
+                    dayOfBirth = LocalDate.now()
             )
         }
 
         fun fakeUpdatedEmployee(): Employee {
             return Employee(
                     id = id,
-                    firstName = "Shawn",
+                    userName = "john.doe",
+                    firstName = "John",
                     middleName = "Michaels",
-                    lastName = "Lesnar",
-                    emailId = "shawn.michaels@gmail.com"
+                    lastName = "Doe",
+                    emailId = "john.doe@gmail.com",
+                    dayOfBirth = LocalDate.now()
             )
         }
 
         fun fakeUpdatedEmployeeEntity(): EmployeeEntity {
             return EmployeeEntity(
                     id = id,
-                    firstName = "Shawn",
+                    userName = "john.doe",
+                    firstName = "John",
                     middleName = "Michaels",
-                    lastName = "Lesnar",
-                    emailId = "shawn.michaels@gmail.com"
+                    lastName = "Doe",
+                    emailId = "john.doe@gmail.com",
+                    dayOfBirth = LocalDate.now()
             )
         }
     }
