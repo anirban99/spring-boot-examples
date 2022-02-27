@@ -1,0 +1,59 @@
+### Response code: 200; Time: 246ms; Content length: 167 bytes
+POST http://localhost:8080/restaurants
+Content-Type: application/json
+
+{
+  "monday" : [
+    {
+      "type" : "close",
+      "value" : 3600
+    }
+  ],
+  "tuesday" : [
+    {
+      "type" : "open",
+      "value" : 36000
+    },
+    {
+      "type" : "close",
+      "value" : 64800
+    }
+  ],
+  "wednesday" : [],
+  "thursday" : [
+    {
+      "type" : "open",
+      "value" : 37800
+    },
+    {
+      "type" : "close",
+      "value" : 64800
+    }
+  ],
+  "friday" : [
+    {
+      "type" : "open",
+      "value" : 36000
+    }
+  ],
+  "saturday" : [
+    {
+      "type" : "close",
+      "value" : 3600
+    },
+    {
+      "type" : "open",
+      "value" : 36000
+    }
+  ],
+  "sunday" : [
+    {
+      "type" : "close",
+      "value" : 3600
+    },
+    {
+      "type" : "open",
+      "value" : 43200
+    }
+  ]
+}

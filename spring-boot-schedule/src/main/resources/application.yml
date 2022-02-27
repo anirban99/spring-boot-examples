@@ -1,0 +1,11 @@
+spring:
+  jackson:
+    mapper:
+      accept-case-insensitive-enums: true
+
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
+    include-stacktrace: never
+    include-exception: false
