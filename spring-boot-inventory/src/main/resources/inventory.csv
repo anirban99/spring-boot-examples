@@ -1,0 +1,17 @@
+ID,Make,Model,Price,Condition,DiscountPrice,Date
+5,Audi,A3,32450,,,2021-03-02
+6,VW,Golf 3,850,USED,12%,2021-03-5
+65,BMW,354i,8890.50,USED,7999,2007-6-21
+8,Trabant,601 Deluxe,1000,NEW,,1989-12-09
+7,Audi,Van type,8900,NEW,n/a,
+78,Jaguar,X-Type,56000,USED,,2005-12-16
+76,Toyota,Corolla,18995,NEW,8.5%,2014-3-12
+98,Toyota,Corolla,21200,,n/a,2018-11-9
+99,Toyota,Corolla,9200,USED,,2014-9-16
+95,Toyota,Corolla,9200,USED,,2014-9-15
+23,Mercedes,E-Class,9999.95,USED,8000,2021-04-04
+25,Mercedes,S-Class,12000,,,2021-03-02
+67,Ford,Bronco Vintage Supreme,8950.30,USED,,1995-8-26
+71,Mini,Classic Saloon,2999.95,,5.0%,2001-04-01
+72,Mini,Classic Saloon X3,2000.00,,,2002-3-11
+2,Mercedes,S-Class,34000,NEW,10%,2021-03-02

@@ -1,0 +1,3 @@
+# Get a list of all cars
+GET http://localhost:8080/cars
+Accept: application/json

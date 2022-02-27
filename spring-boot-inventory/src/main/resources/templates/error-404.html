@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title th:text="${message}"></title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/@tailwindcss/typography@0.4.x/dist/typography.min.css"/>
+</head>
+<body class="prose prose-sm m-auto min-w-min prose-red">
+<h1 class="text-center pt-24">An Error occured during this request..!</h1>
+<table class=" border bg-gray-100">
+    <tr><td class="border w-96">Message</td><td th:text="${messages}"></td></tr>
+    <tr><td class="border w-96">Status Code</td><td th:text="${status}"></td></tr>
+    <tr><td class="border w-96">Exception</td><td th:text="${exception}"></td></tr>
+    <tr><td class="border w-96">Stacktrace</td><td><pre th:text="${trace}"></pre></td></tr>
+    <tr><td class="border w-96">Binding Errors</td><td th:text="${errors}"></td></tr>
+</table>
+</body>
+</html>
