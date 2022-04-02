@@ -1,1 +1,1 @@
-rootProject.name = "schedule"
+rootProject.name = "spring-boot-schedule"

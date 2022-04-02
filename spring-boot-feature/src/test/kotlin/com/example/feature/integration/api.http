@@ -1,0 +1,11 @@
+###
+GET http://localhost:8080/features
+
+###
+GET http://localhost:8080/features/39c2f29e-c0f8-4a39-a98b-deed547d6aea/quicklook
+
+###
+GET http://localhost:8080/features/49c2f29e-c0f8-4a39-a98b-deed547d6aea/quicklook
+
+###
+GET http://localhost:8080/features/b0d3bf6a-ff54-49e0-a4cb-e57dcb68d3b5/quicklook
