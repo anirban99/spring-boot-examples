@@ -1,0 +1,13 @@
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
+    include-stacktrace: never
+    include-exception: false
+
+car2go:
+#  baseUrl: "http://localhost:3000"
+  baseUrl: "http://host.docker.internal:3000"
+  vehicle: "/vehicles"
+  locationName: "/Stuttgart"
+  duration: "100000"

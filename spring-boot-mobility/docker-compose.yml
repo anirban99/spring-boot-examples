@@ -1,0 +1,28 @@
+version: '3'
+services:
+  vehicles-server:
+    image: car2godeveloper/api-for-coding-challenge
+    container_name: vehicles-server
+    ports:
+      - "3000:3000"
+    networks:
+      - spring-cloud-network
+
+  spring-boot-mobility-server:
+    image: spring-boot-mobility:latest
+    container_name: spring-boot-mobility-server
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    ports:
+      - "8080:8080"
+    depends_on:
+      - vehicles-server
+    networks:
+      - spring-cloud-network
+
+networks:
+  spring-cloud-network:
+    driver: bridge
