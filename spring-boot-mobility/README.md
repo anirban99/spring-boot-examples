@@ -75,7 +75,7 @@ GET request to fetch a polygon based on the VIN of the vehicles
 curl --location --request GET 'http://localhost:8080/locations/4T1BE30K16S9GP3AA'
 ```
 
-####Note:
+#### Note:
 I'm using `host.docker.internal` to establish localhost connection between the docker containers.
 The `host.docker.internal` is specified in the `docker-compose` file. The `host.docker.internal` 
 can also be passed as argument to run the Docker image.
