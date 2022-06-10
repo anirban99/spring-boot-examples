@@ -1,0 +1,4 @@
+weather:
+  baseUrl: "https://api.openweathermap.org/data/2.5/weather"
+  city: "London"
+  appKey: "3fc9cb54394cc7ad0010daa12eb9e286"
