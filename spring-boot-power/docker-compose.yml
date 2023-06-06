@@ -1,0 +1,12 @@
+version: '3'
+services:
+  spring-boot-power-server:
+    image: spring-boot-power:latest
+    container_name: spring-boot-power-server
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    ports:
+      - "8080:8080"

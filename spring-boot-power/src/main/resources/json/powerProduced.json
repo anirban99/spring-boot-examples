@@ -1,0 +1,137 @@
+[
+  {
+    "id": "aff8c6b2-3919-4847-b41d-9c4182832841",
+    "windPark": "DKX",
+    "powerProduced": 6.75,
+    "period": "30m",
+    "timestamp": "2020-05-17T00:00:00Z",
+    "createdOn": "2020-05-20T13:17:00Z",
+    "updatedOn": "2020-05-20T13:17:00Z"
+  },
+  {
+    "id": "20e1cb09-5403-4bed-86f4-19da202f2dbe",
+    "windPark": "PPA",
+    "powerProduced": 6.88,
+    "period": "30m",
+    "timestamp": "2020-05-17T00:30:00Z",
+    "createdOn": "2020-05-20T13:17:00Z",
+    "updatedOn": "2020-05-20T13:17:00Z"
+  },
+  {
+    "id": "c73b5189-a883-43cc-9b64-3954285b7569",
+    "windPark": "QMA",
+    "powerProduced": 6.85,
+    "period": "30m",
+    "timestamp": "2020-05-17T01:00:00Z",
+    "createdOn": "2020-05-20T13:17:00Z",
+    "updatedOn": "2020-05-20T13:17:00Z"
+  },
+  {
+    "id": "36b74a41-74cc-4fe5-9f79-c3163a31253f",
+    "windPark": "PPA",
+    "powerProduced": 7.1,
+    "period": "30m",
+    "timestamp": "2020-05-17T01:30:00Z",
+    "createdOn": "2020-05-20T13:17:00Z",
+    "updatedOn": "2020-05-20T13:17:00Z"
+  },
+  {
+    "id": "f665b130-e892-4403-81f5-cffd0b075780",
+    "windPark": "DKX",
+    "powerProduced": 5.79,
+    "period": "30m",
+    "timestamp": "2020-05-17T02:00:00Z",
+    "createdOn": "2020-05-20T13:17:00Z",
+    "updatedOn": "2020-05-20T13:17:00Z"
+  },
+  {
+    "id": "2970a7d1-2e5a-4b80-9f1f-0a37d82b3e3d",
+    "windPark": "QMA",
+    "powerProduced": 3.94,
+    "period": "30m",
+    "timestamp": "2020-05-17T02:30:00Z",
+    "createdOn": "2020-05-20T13:17:00Z",
+    "updatedOn": "2020-05-20T13:17:00Z"
+  },
+  {
+    "id": "b17fb2a6-f266-47d9-9ee7-ce473cc6f9c3",
+    "windPark": "DKX",
+    "powerProduced": 2.48,
+    "period": "30m",
+    "timestamp": "2020-05-17T03:00:00Z",
+    "createdOn": "2020-05-20T13:17:00Z",
+    "updatedOn": "2020-05-20T13:17:00Z"
+  },
+  {
+    "id": "2cecc125-f9d1-4876-b03a-5bea7c2e2c62",
+    "windPark": "LIM",
+    "powerProduced": 7.03,
+    "period": "30m",
+    "timestamp": "2020-05-17T03:30:00Z",
+    "createdOn": "2020-05-20T13:17:00Z",
+    "updatedOn": "2020-05-20T13:17:00Z"
+  },
+  {
+    "id": "0abbf698-ce55-4cd5-9731-d56d4b525c6f",
+    "windPark": "QMA",
+    "powerProduced": 5.6,
+    "period": "30m",
+    "timestamp": "2020-05-17T04:00:00Z",
+    "createdOn": "2020-05-20T13:17:00Z",
+    "updatedOn": "2020-05-20T13:17:00Z"
+  },
+  {
+    "id": "ae767d59-eedc-481b-a9d8-c183de005807",
+    "windPark": "QMA",
+    "powerProduced": 3.52,
+    "period": "30m",
+    "timestamp": "2020-05-17T04:30:00Z",
+    "createdOn": "2020-05-20T13:17:00Z",
+    "updatedOn": "2020-05-20T13:17:00Z"
+  },
+  {
+    "id": "3fc63066-b884-450a-85db-02d7ed438c60",
+    "windPark": "QMA",
+    "powerProduced": 9.21,
+    "period": "30m",
+    "timestamp": "2020-05-17T05:00:00Z",
+    "createdOn": "2020-05-20T13:17:00Z",
+    "updatedOn": "2020-05-20T13:17:00Z"
+  },
+  {
+    "id": "f9fad890-09da-4d8f-a215-140be4ed4604",
+    "windPark": "DKX",
+    "powerProduced": 5.01,
+    "period": "30m",
+    "timestamp": "2020-05-17T05:30:00Z",
+    "createdOn": "2020-05-20T13:17:00Z",
+    "updatedOn": "2020-05-20T13:17:00Z"
+  },
+  {
+    "id": "4ff41b3c-38a7-4aef-80a8-43fcbc2015d6",
+    "windPark": "DKX",
+    "powerProduced": 4.42,
+    "period": "30m",
+    "timestamp": "2020-05-17T06:00:00Z",
+    "createdOn": "2020-05-20T13:17:00Z",
+    "updatedOn": "2020-05-20T13:17:00Z"
+  },
+  {
+    "id": "2d9480ca-8e3c-426d-b2ea-5d5618af7b5c",
+    "windPark": "QMA",
+    "powerProduced": 6.09,
+    "period": "30m",
+    "timestamp": "2020-05-17T06:30:00Z",
+    "createdOn": "2020-05-20T13:17:00Z",
+    "updatedOn": "2020-05-20T13:17:00Z"
+  },
+  {
+    "id": "6270b6f0-e966-4d15-85e8-f200a1adfde7",
+    "windPark": "QMA",
+    "powerProduced": 3.58,
+    "period": "30m",
+    "timestamp": "2020-05-17T07:00:00Z",
+    "createdOn": "2020-05-20T13:17:00Z",
+    "updatedOn": "2020-05-20T13:17:00Z"
+  }
+]

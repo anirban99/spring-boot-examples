@@ -1,0 +1,21 @@
+###
+GET http://localhost:8080/wind-parks
+
+###
+GET http://localhost:8080/wind-parks/6270b6f0-e966-4d15-85e8-f200a1adfde7
+
+###
+PATCH http://localhost:8080/wind-parks/6270b6f0-e966-4d15-85e8-f200a1adfde7
+Content-Type: application/json
+
+{
+  "operation": "update",
+  "key": "powerProduced",
+  "value": 9.75
+}
+
+###
+GET http://localhost:8080/wind-parks/aff8c6b2-3919-4847-b41d-9c4182832841
+
+###
+DELETE http://localhost:8080/wind-parks/aff8c6b2-3919-4847-b41d-9c4182832841
